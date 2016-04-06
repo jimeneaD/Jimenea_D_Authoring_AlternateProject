@@ -1,7 +1,41 @@
 $n: none;
+$c: center;
 
 body {
 	margin: 0;
 	padding: 0;
 	background-color: #ece;
+}
+
+h1 {
+	display: $n;
+	text-align: $c;
+}
+
+h2 {
+	text-align: $c;
+}
+
+.text {
+	text-align: $c;
+	padding: 0 1.5em 0 1.5em;
+}
+
+.pro {
+	background-color: white;
+	padding: 1em 0 1em 0;
+	margin: 1em 0 1em 0;
+
+	img {
+	display: block;
+	margin: 0 auto 0 auto;
+	}
+
+	p {
+	text-align: $c;
+	}
+}
+
+footer p {
+	text-align: $c;
 }

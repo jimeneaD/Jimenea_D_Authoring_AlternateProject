@@ -3,4 +3,28 @@ body {
   padding: 0;
   background-color: #ece; }
 
+h1 {
+  display: none;
+  text-align: center; }
+
+h2 {
+  text-align: center; }
+
+.text {
+  text-align: center;
+  padding: 0 1.5em 0 1.5em; }
+
+.pro {
+  background-color: white;
+  padding: 1em 0 1em 0;
+  margin: 1em 0 1em 0; }
+  .pro img {
+    display: block;
+    margin: 0 auto 0 auto; }
+  .pro p {
+    text-align: center; }
+
+footer p {
+  text-align: center; }
+
 /*# sourceMappingURL=styles.css.map */
