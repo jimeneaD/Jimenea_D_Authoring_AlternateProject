@@ -1,7 +1,14 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+/* CSS DOCUMENT */
 body {
   margin: 0;
   padding: 0;
-  background-color: #ece; }
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif; }
 
 h1 {
   display: none;
@@ -10,21 +17,41 @@ h1 {
 h2 {
   text-align: center; }
 
+header {
+  background-color: #086A87;
+  padding: 0;
+  margin: 0; }
+
+.logo {
+  margin: 1em 0 0 1em; }
+
+nav {
+  float: right; }
+
 .text {
   text-align: center;
-  padding: 0 1.5em 0 1.5em; }
+  font-size: 14px;
+  padding: 0 1.8em 0 1.8em;
+  display: none; }
 
 .pro {
-  background-color: white;
-  padding: 1em 0 1em 0;
-  margin: 1em 0 1em 0; }
+  background-color: #CEE3F6;
+  padding: 1em;
+  margin: 1em; }
   .pro img {
     display: block;
-    margin: 0 auto 0 auto; }
-  .pro p {
-    text-align: center; }
+    margin: 0 auto 0 auto;
+    height: 150px;
+    width: 150px; }
+  .pro .info {
+    margin: 0 0 0 2em; }
 
-footer p {
-  text-align: center; }
+footer {
+  padding: 2em 2em 3em 2em;
+  color: white;
+  background-color: #232447;
+  height: 22em; }
+  footer .copy {
+    font-size: 10px; }
 
 /*# sourceMappingURL=styles.css.map */

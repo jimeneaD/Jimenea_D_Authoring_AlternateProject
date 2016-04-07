@@ -1,10 +1,15 @@
+@import "bourbon/bourbon";
+@import "neat/neat";
+
 $n: none;
 $c: center;
+
+/* CSS DOCUMENT */
 
 body {
 	margin: 0;
 	padding: 0;
-	background-color: #ece;
+	font-family: $helvetica;
 }
 
 h1 {
@@ -16,26 +21,51 @@ h2 {
 	text-align: $c;
 }
 
+header {
+	background-color: #086A87;
+	padding: 0;
+	margin: 0;
+}
+
+.logo {
+	margin: 1em 0 0 1em;
+}
+
+nav {
+	float: right;
+}
+
 .text {
 	text-align: $c;
-	padding: 0 1.5em 0 1.5em;
+	font-size: 14px;
+	padding: 0 1.8em 0 1.8em;
+	display: $n;
 }
 
 .pro {
-	background-color: white;
-	padding: 1em 0 1em 0;
-	margin: 1em 0 1em 0;
+	background-color: #CEE3F6;
+	padding: 1em;
+	margin: 1em;
 
 	img {
 	display: block;
 	margin: 0 auto 0 auto;
+	height: 150px;
+	width: 150px;
 	}
 
-	p {
-	text-align: $c;
+	.info {
+		margin: 0 0 0 2em;
 	}
 }
 
-footer p {
-	text-align: $c;
+footer { 
+	padding: 2em 2em 3em 2em;
+	color: white;
+	background-color: #232447;
+	height: 22em;
+
+	.copy {
+			font-size: 10px;
+		}
 }
