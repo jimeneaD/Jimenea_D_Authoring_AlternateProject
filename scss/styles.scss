@@ -3,6 +3,7 @@
 
 $n: none;
 $c: center;
+$b: block;
 
 /* CSS DOCUMENT */
 
@@ -22,50 +23,153 @@ h2 {
 }
 
 header {
+	/*@include linear-gradient(to top, white, #086A87);*/
 	background-color: #086A87;
 	padding: 0;
 	margin: 0;
 }
 
+.head {
+	@include outer-container;
+  	.logo { @include span-columns(3); }
+  	#navigation { @include span-columns(9); }
+  		@include media(769px) {
+			@include outer-container;
+		  	.logo { @include span-columns(2); }
+		  	#navigation { @include span-columns(10); }
+		}
+}
+
 .logo {
-	margin: 1em 0 0 1em;
+	padding: 0.6em 0 0.6em 1em;
+}
+
+#menu-icon {
+	display: inline-block;
+	margin:1em;
+	width: 60px;
+	height: 60px;
+	background: url(../images/menu_icon.png) center;
+		@include media(769px) {
+			display: $n;
+		}
+}
+
+.mobile-Nav {
+	float: right;
+	ul {
+		list-style: $n;
+		display: $n;
+		position: absolute;
+		padding: 20px;
+		background: #fff;
+		right: 20px;
+		top: 60px;
+		width: 50%;
+	}
+	ul li {
+		text-align: center;
+		width: 100%;
+		padding: 10px 0;
+		margin: 0;
+			@include media(769px) {
+				text-align: left;
+				float: left;
+				padding: 10px;
+			}
+	}
 }
 
 nav {
+	display: $n;
 	float: right;
+		@include media(769px) {
+			display: $b;
+			ul {
+				list-style: $n;
+				display: $b;
+			}
+			li {
+			    display: inline;
+			    float: left;
+			}
+			a {
+				text-decoration: none;
+				display: block;
+    			padding: 1.4em;
+    			color: white;
+			}
+			a:hover {
+				color: #086A87;
+				background-color: #fff;
+			}
+		}
 }
 
 .text {
 	text-align: $c;
-	font-size: 14px;
-	padding: 0 1.8em 0 1.8em;
+	font-size: 1.2em;
+	padding: 8em 10em 8em 10em;
 	display: $n;
+	background-color: lightblue;
+		@include media(769px) {
+			display: $b;
+		}
 }
 
 .pro {
 	background-color: #CEE3F6;
 	padding: 1em;
 	margin: 1em;
-
-	img {
-	display: block;
-	margin: 0 auto 0 auto;
-	height: 150px;
-	width: 150px;
-	}
-
-	.info {
-		margin: 0 0 0 2em;
-	}
+		@include media(769px) {
+			@include outer-container;
+  			.prod_img { @include span-columns(6); }
+  			.prod_info { @include span-columns(6); }	
+		}
+		
+		.prod_img {
+			display: block;
+			margin: 0 auto 0 auto;
+			height: 250px;
+			width: 250px;
+		}
+		.prod_info {
+			text-align: center;
+			font-size: 1.5em;
+			font-weight: bold;
+				@include media(769px) {
+					text-align: left;
+					margin: 0 0 0 3em;
+				}
+		}
 }
 
-footer { 
-	padding: 2em 2em 3em 2em;
+footer {
+	margin: 1em 0 0 0;
+	padding: 0;
 	color: white;
 	background-color: #232447;
-	height: 22em;
+	font-size: 0.9em;
+		@include media(769px) {
+			font-size: 1em;
+		}
+
+	.ft {
+		padding: 3em;	
+		text-align: center;
+			@include media(769px) {
+				text-align: inherit;
+				@include outer-container;
+			  	.foot1 { @include span-columns(8); }
+			  	.foot2 { @include span-columns(4); }
+			}
+	}
 
 	.copy {
-			font-size: 10px;
-		}
+		text-align: center;
+		padding: 2em 0 0 0;
+			@include media(769px) {
+				float: right;
+			}
+	}
 }
