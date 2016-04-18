@@ -74,6 +74,7 @@ header {
 
 #menu-icon {
   display: inline-block;
+  float: right;
   margin: 1em;
   width: 60px;
   height: 60px;
@@ -83,33 +84,35 @@ header {
       display: none; } }
 
 .mobile-Nav {
-  float: right; }
+  display: none;
+  padding: 0;
+  margin: 0;
+  background-color: #086A87; }
+  @media screen and (min-width: 769px) {
+    .mobile-Nav {
+      display: none; } }
   .mobile-Nav ul {
     list-style: none;
-    display: none;
-    position: absolute;
-    padding: 20px;
-    background: #fff;
-    right: 20px;
-    top: 60px;
-    width: 50%; }
-  .mobile-Nav ul li {
-    text-align: center;
-    width: 100%;
-    padding: 10px 0;
+    padding: 0;
     margin: 0; }
-    @media screen and (min-width: 769px) {
-      .mobile-Nav ul li {
-        text-align: left;
-        float: left;
-        padding: 10px; } }
+  .mobile-Nav a {
+    text-decoration: none;
+    display: block;
+    color: white;
+    font-size: 2em;
+    text-align: center;
+    padding: 0.6em; }
+  .mobile-Nav a:hover {
+    color: #086A87;
+    background-color: #fff; }
 
 nav {
   display: none;
-  float: right; }
+  float: left; }
   @media screen and (min-width: 769px) {
     nav {
-      display: block; }
+      display: block;
+      float: right; }
       nav ul {
         list-style: none;
         display: block; }
